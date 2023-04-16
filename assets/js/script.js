@@ -1,6 +1,13 @@
-
+document.getElementById('screen').innerHTML = 0;
+if (document.getElementById('screen').innerHTML = 0) {
+    clearScreen();
+    getValue();
+};
 // Obtiene el valor de cualquier botón
 function getValue(buttonValue) {
+    if (document.getElementById('screen').innerHTML == 0){
+        document.getElementById("screen").innerHTML = ""
+    }
     var key = document.getElementById(buttonValue).innerHTML;
     var screen = document.getElementById("screen").innerHTML;
     var display = document.getElementById('screen').value = screen + key;
@@ -23,7 +30,7 @@ function addDecimal() {
 }
 //Borra o limpia toda la pantalla.
 function clearScreen() {
-    var screen = document.getElementById("screen").value = "";
+    var screen = document.getElementById("screen").value = "0";
     document.getElementById('screen').innerHTML = screen;
 }
 
